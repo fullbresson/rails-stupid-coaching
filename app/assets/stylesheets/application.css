@@ -1,15 +1,88 @@
 /*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
  *= require_tree .
  *= require_self
  */
+
+/* ---- Base dark mode with ruby-red highlights ---- */
+body {
+  background: #18181b !important;
+  color: #ffe3e9 !important;
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+}
+
+/* ---- Headings ---- */
+h1, h2, h3 {
+  color: #ff003c;
+  text-shadow: 0 0 10px #ff003c88, 0 0 20px #a7001c77;
+}
+
+/* ---- Neon borders & accents ---- */
+.card {
+  border-radius: 16px;
+  border: 2px solid #ff003c88;
+  background: #232026 !important;
+  box-shadow: 0 0 16px #ff003c33, 0 0 8px #a7001c44;
+  color: #ffe3e9 !important;
+}
+
+.card * {
+  color: #ffe3e9 !important;
+}
+
+/* ---- Ruby-red button ---- */
+.btn-primary, .btn {
+  background: linear-gradient(90deg, #ff003c 60%, #a7001c 100%);
+  border: none;
+  color: #fff !important;
+  transition: background 0.2s, box-shadow 0.2s;
+}
+
+.btn-primary:hover, .btn:hover {
+  background: #a7001c;
+  box-shadow: 0 0 16px #a7001c, 0 0 32px #ff003c99;
+}
+
+a, .nav-link, .link {
+  color: #ff003c;
+  text-shadow: 0 0 6px #ff003c, 0 0 12px #a7001c44;
+  transition: color 0.15s;
+}
+
+a:hover, .nav-link:hover, .link:hover {
+  color: #a7001c;
+  text-shadow: 0 0 8px #a7001c, 0 0 16px #ff003c66;
+}
+
+/* ---- Input focus ---- */
+.form-control:focus {
+  border-color: #ff003c;
+  box-shadow: 0 0 12px #ff003c88, 0 0 8px #a7001c44;
+  background: #222024;
+  color: #fff;
+}
+
+/* ---- Panel for main content ---- */
+.main-panel {
+  margin: 2rem auto 2rem 3rem; /* top, right, bottom, left */
+  max-width: 600px;
+  background: #232026;
+  border: 2px solid #a7001c99;
+  box-shadow: 0 0 32px #ff003c33, 0 0 12px #a7001c44;
+  padding: 2rem;
+  border-radius: 18px;
+}
+
+label {
+  color: #ff003c;
+  font-weight: bold;
+  text-shadow: 0 0 6px #ff003c66;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  background: #18181b;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #ff003c 40%, #a7001c 100%);
+  border-radius: 8px;
+}
